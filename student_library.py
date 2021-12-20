@@ -3,7 +3,7 @@
 class Library:
     def __init__(self, list_of_books):  # taking constructor
         self.Books=list_of_books        # here we create an instance attribute
-    # Disilaying the books Library have.
+    # Displaying the books Library have.
     def display_books(self):
         print("Books Present in the Library are: ")
         for index,book_list in enumerate(self.Books):        # by using the enumerate function we can display the serial no of the books
@@ -13,7 +13,7 @@ class Library:
 
     def borrow(self, Book_name):
         if Book_name in self.Books:
-            print(f"The Name of the book issue to you is '{Book_name}'. Return it before 30 days. Another wise extra fine will be charged,")
+            print(f"The Name of the book issued to you is '{Book_name}'. Return it before 30 days. Otherwise extra fine will be charged,")
             self.Books.remove(Book_name)
             return True
         else:
@@ -26,8 +26,8 @@ class Library:
         
         print(f"Thanks for returning this book '{Name}'. ")
 
-# A student can request the book he want from the library.
-# and student also want to return the book to the library.
+# A student can request the book he wants from the library.
+# and student also wants to return the book to the library.
 class Student:
     def requestBook(self):
         self.book=input(f"Enter the name of the book you want {Name} : ")
